@@ -1,0 +1,24 @@
+{
+    "name": "maxlen/anticaptcha-php",
+    "description": "Wrapper for anti-captcha.com",
+    "type": "extension",
+    "keywords": [
+        "simple anticaptcha",  "reCAPTCHA", "google reCAPTCHA"
+    ],
+    "license": "BSD-4-Clause",
+    "minimum-stability": "1.0.*@dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "authors": [
+        {
+            "name": "Maxim",
+            "email": "maxlen@inbox.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "maxlen\\anticaptcha\\": ""
+        }
+    }
+}

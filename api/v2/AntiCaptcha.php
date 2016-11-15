@@ -1,5 +1,5 @@
 <?php
-
+/* test comment */
 namespace maxlen\anticaptcha\api\v2;
 
 interface AntiCaptchaTaskProtocol {

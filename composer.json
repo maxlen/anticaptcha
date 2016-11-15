@@ -1,5 +1,5 @@
 {
-    "name": "maxlen/anticaptcha-test",
+    "name": "maxlen/anticaptcha",
     "description": "Wrapper for anti-captcha.com",
     "type": "extension",
     "keywords": [

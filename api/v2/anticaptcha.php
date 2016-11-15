@@ -1,5 +1,7 @@
 <?php
 
+namespace maxlen\anticaptcha\api\v2;
+
 interface AntiCaptchaTaskProtocol {
     
     public function getPostData();

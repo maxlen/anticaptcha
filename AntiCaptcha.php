@@ -35,8 +35,4 @@ class AntiCaptcha extends NoCaptcha
 
         return $this->siteKey;
     }
-    
-    public function testNazar()
-    {
-    }
 }

@@ -1,7 +1,7 @@
 <?php
 
-include("anticaptcha.php");
-include("nocaptcha.php");
+include("AntiCaptcha.php");
+include("NoCaptcha.php");
 
 $api = new NoCaptcha();
 $api->setVerboseMode(true);

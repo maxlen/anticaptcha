@@ -1,6 +1,6 @@
 <?php
 
-include("anticaptcha.php");
+include("AntiCaptcha.php");
 include("nocaptchaproxyless.php");
 
 $api = new NoCaptchaProxyless();

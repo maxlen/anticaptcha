@@ -2,7 +2,7 @@
 
 namespace maxlen\anticaptcha\api\v2;
 
-class NoCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
+class NoCaptcha extends AntiCaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
     private $websiteKey;

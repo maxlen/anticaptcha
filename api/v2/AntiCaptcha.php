@@ -10,7 +10,7 @@ interface AntiCaptchaTaskProtocol {
     
 }
 
-class Anticaptcha {
+class AntiCaptcha {
 
     private $host = "api.anti-captcha.com";
     private $scheme = "https";

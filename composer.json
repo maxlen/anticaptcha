@@ -6,7 +6,7 @@
         "simple anticaptcha",  "reCAPTCHA", "google reCAPTCHA"
     ],
     "license": "BSD-4-Clause",
-    "minimum-stability": "1.0.*@dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0"
     },

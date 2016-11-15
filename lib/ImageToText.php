@@ -1,8 +1,8 @@
 <?php
 
-namespace maxlen\anticaptcha\api\v2;
+namespace maxlen\anticaptcha\lib;
 
-class ImageToText extends Anticaptcha implements AntiCaptchaTaskProtocol {
+class ImageToText extends AntiCaptcha implements AntiCaptchaTaskProtocol {
 
     private $body;
     private $phrase = false;

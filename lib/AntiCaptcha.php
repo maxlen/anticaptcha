@@ -1,14 +1,6 @@
 <?php
 /* test comment */
-namespace maxlen\anticaptcha\api\v2;
-
-interface AntiCaptchaTaskProtocol {
-    
-    public function getPostData();
-    public function setTaskInfo($taskInfo);
-    public function getTaskSolution();
-    
-}
+namespace maxlen\anticaptcha\lib;
 
 class AntiCaptcha {
 

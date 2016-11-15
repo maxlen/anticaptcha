@@ -1,6 +1,6 @@
 <?php
 
-namespace maxlen\anticaptcha\api\v2;
+namespace maxlen\anticaptcha\lib;
 
 class NoCaptcha extends AntiCaptcha implements AntiCaptchaTaskProtocol {
 

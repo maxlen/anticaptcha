@@ -6,7 +6,7 @@
  * Time: 18:59
  */
 
-namespace maxlen\anticaptcha\lib;
+namespace maxlen\anticaptcha\lib\v2;
 
 interface AntiCaptchaTaskProtocol
 {

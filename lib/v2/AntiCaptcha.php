@@ -1,6 +1,6 @@
 <?php
 /* test comment */
-namespace maxlen\anticaptcha\lib;
+namespace maxlen\anticaptcha\lib\v2;
 
 class AntiCaptcha {
 
@@ -11,9 +11,7 @@ class AntiCaptcha {
     private $errorMessage;
     private $taskId;
     public $taskInfo;
-    
-    
-    
+
     /**
      * Submit new task and receive tracking ID
      */

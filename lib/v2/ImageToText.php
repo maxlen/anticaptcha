@@ -1,6 +1,6 @@
 <?php
 
-namespace maxlen\anticaptcha\lib;
+namespace maxlen\anticaptcha\lib\v2;
 
 class ImageToText extends AntiCaptcha implements AntiCaptchaTaskProtocol {
 

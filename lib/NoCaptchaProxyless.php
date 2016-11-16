@@ -1,8 +1,8 @@
 <?php
 
-namespace maxlen\anticaptcha\api\v2;
+namespace maxlen\anticaptcha\lib;
 
-class NoCaptchaProxyless extends Anticaptcha implements AntiCaptchaTaskProtocol {
+class NoCaptchaProxyless extends AntiCaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
     private $websiteKey;

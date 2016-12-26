@@ -30,6 +30,8 @@ class CaptchaService
     public $webSiteUrl;
     /** @var string $html */
     public $html;
+    /** @var string $imgPath */
+    public $imgPath;
     /** @var string $type */
     public $type;
     /** @var string $apiKey */
@@ -54,21 +56,26 @@ class CaptchaService
     /**
      * CaptchaService constructor.
      * @param $apiKey
-     * @param $webSiteUrl
      * @param $type
-     * @param $html
+     * @param array $params [
+     *  'webSiteUrl' => ... ,
+     *  'html' => ... ,
+     *  'imgPath' => ... ,
+     * ]
      * @throws \Exception
      */
-    public function __construct($apiKey, $webSiteUrl, $type, $html)
+    public function __construct($apiKey, $type, $params = [])
     {
         if (!in_array($type, self::getTypes())) {
             throw new \Exception("Unknown type: {$type}. Must be one of " . implode(',', self::getTypes()));
         }
 
-        $this->webSiteUrl = $webSiteUrl;
-        $this->html = $html;
         $this->type = $type;
         $this->apiKey = $apiKey;
+
+        foreach ($params as $key => $val) {
+            $this->$key = $val;
+        }
 
         $this->init();
     }
@@ -91,7 +98,7 @@ class CaptchaService
             $this->api->debout($this->api->getErrorMessage());
         } else {
             $this->hashResult = $this->api->getTaskSolution();
-            return "\nhash result: ".$this->api->getTaskSolution()."\n\n";
+            return $this->hashResult;
         }
 
         return false;
@@ -103,7 +110,7 @@ class CaptchaService
      */
     public function init()
     {
-        if ($this->initSiteKey() && $this->initApi()) {
+        if ($this->initApi()) {
             $this->api->setVerboseMode(true);
             $this->api->setKey($this->apiKey);
             return true;
@@ -192,6 +199,7 @@ class CaptchaService
         switch ($this->type) {
             case self::TYPE_IMAGE_TO_TEXT:
                 $this->api = new ImageToText();
+                $this->api->setFile($this->imgPath);
                 break;
 
             case self::TYPE_NO_CAPTCHA:
@@ -204,7 +212,7 @@ class CaptchaService
                 $this->api->setWebsiteURL($this->webSiteUrl);
 
                 $this->api->setWebsiteKey($this->initSiteKey());
-
+                $this->initSiteKey();
                 $this->initSiteSToken(); // if source-site use old reCAPTCHA code
                 if ($this->websiteSToken) {
                     $this->api->setWebsiteSToken($this->websiteSToken);

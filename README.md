@@ -2,6 +2,11 @@
 
 Wrapper for anti-captcha.com
 
+## Installation:
+```php
+composer require maxlen/anticaptcha
+```
+
 ### Use for captcha ImageToText:
 
 ```php
